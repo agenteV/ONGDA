@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +10,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
   </script>
+     <script src="https://gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+     <script src="https://gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="db.json"></script>
   <script src="app.js"></script>
@@ -63,50 +64,94 @@
         </div>
       </nav>
   </nav>
+  <div class="container mt-5">
 
-  <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://workstars.com.br/wp-content/uploads/2022/09/capa-esportesRH.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://livesportsbr.com/wp-content/uploads/2021/01/19-1.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://rmts.com.br/wp-01/wp-content/uploads/2019/10/imagem-01.jpg" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+    <h1>Cadastro de Usuário</h1>
 
+    <form action="/salvar-usuario" method="POST">
 
+        <div class="mb-3">
 
-<center>
-  <div class="card" style="width: 18rem;">
-    <img src="logo2.PNG" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">TecFit - Sports</h5>
-      <p class="card-text">O tecFit é um prototipo da ODD, ele é um colete que auxilia os tecnicos e preparadores, a saber o rendimento de seu atleta, sua saúde, utilizando microsensores e lasers apropriados para as realizaçoes. E apesar de tudo isso, o colete sera extremamente leve e confortavel para o uso</p>
-      <a href="tecfit.html" class="btn btn-primary">Saiba mais</a>
-    </div>
-  </div>
-</center>
+            <label for="nome" class="form-label">Nome</label>
 
-<center>
-  <footer>
-    <p>Todos os direitos reservados BR &copy; 2023</p>
-  </footer>
-</center>
-</body>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="email" class="form-label">Email</label>
+
+            <input type="email" class="form-control" id="email" name="email" required>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="celular" class="form-label">Celular</label>
+
+            <input type="tel" class="form-control" id="celular" name="celular" required>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="endereco" class="form-label">Endereço</label>
+
+            <input type="text" class="form-control" id="endereco" name="endereco" required>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="complemento" class="form-label">Complemento</label>
+
+            <input type="text" class="form-control" id="complemento" name="complemento">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="numero" class="form-label">Número</label>
+
+            <input type="text" class="form-control" id="numero" name="numero">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="bairro" class="form-label">Bairro</label>
+
+            <input type="text" class="form-control" id="bairro" name="bairro">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="cidade" class="form-label">Cidade</label>
+
+            <input type="text" class="form-control" id="cidade" name="cidade">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="uf" class="form-label">UF</label>
+
+            <input type="text" class="form-control" id="uf" name="uf">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="cep" class="form-label">CEP</label>
+
+            <input type="text" class="form-control" id="cep" name="cep">
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+
+    </form>
+
+</div>
